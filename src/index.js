@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//pages
+import Login from './Pages/login/view';
 
 const Main = () =>{
   return(
-  <>
-    <App/>
-  </>)
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login/>}/>
+    </Routes>
+  </BrowserRouter>)
 }
 
 ReactDOM.render(
